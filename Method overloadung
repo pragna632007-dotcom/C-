@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+
+class MethodOverloadingExample {
+public:
+    // Overloaded method with one integer parameter
+    void display(int a) {
+        std::cout << "Arguments: " << a << std::endl;
+    }
+
+    // Overloaded method with two integer parameters
+    void display(int a, int b) {
+        std::cout << "Arguments: " << a << " and " << b << std::endl;
+    }
+
+    // Overloaded method with a string parameter
+    void display(std::string a) {
+        std::cout << "Arguments: " << a << std::endl;
+    }
+};
+
+int main() {
+    MethodOverloadingExample obj;
+
+    // Calls the version with one int
+    obj.display(10);
+
+    // Calls the version with two ints
+    obj.display(10, 20);
+
+    // Calls the version with a string
+    obj.display("Hello");
+
+    return 0;
+}
