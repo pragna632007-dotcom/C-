@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Declare and initialize a 2D array with 3 rows and 4 columns
+    int matrix[3][4] = {
+        {10, 20, 30, 40}, // Row 0
+        {50, 60, 70, 80}, // Row 1
+        {90, 15, 25, 35}  // Row 2
+    };
+
+    cout << "Displaying the 2D Array elements:" << endl;
+
+    // Outer loop iterates through each row
+    for (int i = 0; i < 3; ++i) {
+        // Inner loop iterates through each column of the current row
+        for (int j = 0; j < 4; ++j) {
+            cout << matrix[i][j] << "\t";
+        }
+        // Print a new line after completing a row
+        cout << endl; 
+    }
+
+    return 0;
+}
