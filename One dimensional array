@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // 1. Declaration and compile-time initialization
+    int numbers[5] = {10, 20, 30, 40, 50};
+
+    // 2. Accessing elements using 0-based indexing
+    cout << "First element (index 0): " << numbers[0] << endl;
+    cout << "Third element (index 2): " << numbers[2] << endl;
+
+    // 3. Modifying an element
+    numbers[4] = 100; // Changes 50 to 100
+    cout << "Modified last element (index 4): " << numbers[4] << endl;
+
+    // 4. Looping through the array using a standard for loop
+    cout << "\nAll array elements using standard loop:" << endl;
+    for (int i = 0; i < 5; i++) {
+        cout << "Element at index " << i << ": " << numbers[i] << endl;
+    }
+
+    // 5. Alternative: Modern C++ Range-based for loop
+    cout << "\nAll array elements using range-based loop:" << endl;
+    for (int num : numbers) {
+        cout << num << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
