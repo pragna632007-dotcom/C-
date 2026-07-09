@@ -1,0 +1,40 @@
+#include <iostream>
+
+int main() {
+    // 1. Static initialization of a 2x3 array (2 rows, 3 columns)
+    int matrix[2][3] = {
+        {10, 20, 30}, // Row 0
+        {40, 50, 60}  // Row 1
+    };
+
+    std::cout << "--- Accessing Static Array ---" << std::endl;
+    // Access individual elements using row and column indices
+    std::cout << "Element at row 0, column 2: " << matrix[0][2] << std::endl; // Outputs 30
+    std::cout << "Element at row 1, column 1: " << matrix[1][1] << std::endl; // Outputs 50
+
+    // 2. User Input with a 3x3 array
+    const int ROWS = 3;
+    const int COLS = 3;
+    int userMatrix[ROWS][COLS];
+
+    std::cout << "\n--- Enter Elements for a " << ROWS << "x" << COLS << " Matrix ---" << std::endl;
+    
+    // Nested loops to take user input
+    for (int i = 0; i < ROWS; i++) {       // Outer loop handles rows
+        for (int j = 0; j < COLS; j++) {   // Inner loop handles columns
+            std::cout << "Enter element [" << i << "][" << j << "]: ";
+            std::cin >> userMatrix[i][j];
+        }
+    }
+
+    // 3. Printing the 2D array in grid format
+    std::cout << "\n--- Displaying Your Matrix ---" << std::endl;
+    for (int i = 0; i < ROWS; i++) {
+        for (int j = 0; j < COLS; j++) {
+            std::cout << userMatrix[i][j] << "\t"; // Tab space between columns
+        }
+        std::cout << std::endl; // New line after each row
+    }
+
+    return 0;
+}
