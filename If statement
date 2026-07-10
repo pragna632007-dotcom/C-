@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number;
+
+    cout << "Enter an integer: ";
+    cin >> number;
+
+    // The if statement checks if the number is greater than 0
+    if (number > 0) {
+        cout << "You entered a positive integer: " << number << endl;
+    }
+
+    cout << "This line always runs." << endl;
+    return 0;
+}
