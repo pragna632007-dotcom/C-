@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int userID = 1001;
+    int userPin = 5544;
+
+    // Outer if statement
+    if (userID == 1001) {
+        printf("User ID verified.\n");
+
+        // Inner nested if-else statement
+        if (userPin == 5544) {
+            printf("Access granted!\n");
+        } else {
+            printf("Error: Incorrect PIN.\n");
+        }
+    } else {
+        printf("Error: Invalid User ID.\n");
+    }
+
+    return 0;
+}
