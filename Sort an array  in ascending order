@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h> // Required for qsort
+
+// Comparator function for ascending order
+int compare(const void* a, const void* b) {
+    return (*(int*)a - *(int*)b);
+}
+
+int main() {
+    int arr[] = {42, 15, 8, 99, 23};
+    int size = sizeof(arr) / sizeof(arr[0]);
+
+    // qsort(array_ptr, number_of_elements, size_of_each_element, comparator)
+    qsort(arr, size, sizeof(int), compare);
+
+    printf("Sorted array: ");
+    for (int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+    return 0;
+}
